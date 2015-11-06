@@ -1,0 +1,24 @@
+{"deployments": [
+    {
+        "name": "valor",
+        "durable_queue": false,
+        "rabbit_host": "lb-db",
+        "rabbit_port": 5672,
+        "rabbit_userid": "openstack",
+        "rabbit_password": " {{ pillar['rabbit_pass']}} ",
+        "rabbit_virtual_host": "/",
+        "exit_on_exception": true,
+        "topics": {
+            "nova": [
+                {
+                    "queue": "monitor.info",
+                    "routing_key": "monitor.info"
+                },
+                {
+                    "queue": "monitor.error",
+                    "routing_key": "monitor.error"
+                }
+            ]
+        }
+    }]
+}
