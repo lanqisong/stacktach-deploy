@@ -5,7 +5,7 @@
         "rabbit_host": "lb-db",
         "rabbit_port": 5672,
         "rabbit_userid": "openstack",
-        "rabbit_password": " {{ pillar['rabbit_pass']}} ",
+        "rabbit_password": "{{ pillar['rabbit_pass']}}",
         "rabbit_virtual_host": "/",
         "exit_on_exception": true,
         "topics": {

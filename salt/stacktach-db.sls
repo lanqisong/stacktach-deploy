@@ -1,6 +1,6 @@
 create-db:
   cmd.script:
-    - source: salt://stacktach/scripts/db-create.sh
+    - source: salt://stacktach/scripts/create-db.sh
     - user: root
     - group: root
     - shell: /bin/bash

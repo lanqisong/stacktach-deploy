@@ -22,6 +22,12 @@
     - user: root
     - group: root
     - mode: 644
+init-repo:
+  cmd.script:
+    - source: salt://scripts/init-repo.sh
+    - user: root
+    - group: root
+    - shell: /bin/bash
 stacktach-deploy:
   cmd.script:
     - source: salt://stacktach/scripts/stacktach-deploy.sh
